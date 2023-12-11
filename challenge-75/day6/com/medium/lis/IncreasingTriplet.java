@@ -36,7 +36,7 @@ package com.medium.lis;
 public class IncreasingTriplet {
 
     public boolean increasingTriplet(int[] nums) {
-        int[] lisArr = new int[nums.length];
+        int[] lisArr = new int[3];
         int lisArrCounter = 0;
         for (int num : nums) {
             if (lisArrCounter >= 3) {

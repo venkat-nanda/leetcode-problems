@@ -47,21 +47,21 @@ import java.util.Stack;
  */
 public class RemoveStars {
     public String removeStars(String s) {
-        Stack<Character> starLessStr = new Stack<>();
+        Stack<Character> starLessStack = new Stack<>();
         char[] charArr = s.toCharArray();
         for(char c: charArr){
-            if ( c == '*' && !starLessStr.isEmpty()) {
-                starLessStr.pop();
+            if ( c == '*' && !starLessStack.isEmpty()) {
+                starLessStack.pop();
             } else{
-                starLessStr.push(c);
+                starLessStack.push(c);
             }
         }
-        int reverseCounter = starLessStr.size() - 1;
-        char[] starLess = new char[starLessStr.size()];
-        while(!starLessStr.isEmpty()){
-            starLess[reverseCounter] = starLessStr.pop();
+        int reverseCounter = starLessStack.size() - 1;
+        char[] starLessCharArr = new char[starLessStack.size()];
+        while(!starLessStack.isEmpty()){
+            starLessCharArr[reverseCounter] = starLessStack.pop();
             reverseCounter --;
         }
-        return new String(starLess);
+        return new String(starLessCharArr);
     }
 }

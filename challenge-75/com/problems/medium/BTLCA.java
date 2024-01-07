@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class BTLCA {
 
-    private Map<TreeNode, TreeNode> parentsMap = new HashMap<>();
+    private final Map<TreeNode, TreeNode> parentsMap = new HashMap<>();
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         parentsMap.put(root, null);
